@@ -4,12 +4,10 @@
 
 <script>
   export default {
-    data() {
-      return {
-        author: {
-          firstName: 'Ryan',
-          lastName: 'Stuhl'
-        }
+    props: {
+      author: {
+        type: Object,
+        required: true
       }
     }
   }

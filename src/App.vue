@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12">
         <announcement></announcement>
-        <app-author></app-author>
+        <app-article></app-article>
       </div>
     </div>
   </div>
@@ -11,10 +11,20 @@
 
 <script>
 export default {
+  data() {
 
+  }
 }
 </script>
 
 <style lang="scss">
+  * {
+    font-style: italic;
+  }
+</style>
 
+<style scoped lang="scss">
+  * {
+    color: red;
+  }
 </style>

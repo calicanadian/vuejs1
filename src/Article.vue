@@ -4,20 +4,24 @@
 
     <p>Published on {{ published | moment }}</p>
     <p class="lead">{{ content }}</p>
-    <app-author></app-author>
+    <app-author :author="author"></app-author>
   </div>
 </template>
 
 <script>
-  // import moment from 'moment';
-  import Author from './Author.vue';
+  import moment from 'moment';
+  import Author from './Author.vue'
 
   export default {
     data() {
       return {
         title: "Vue.js is awesome and powerful",
         published: new Date(),
-        content: "Vue.js' power is only limited by its awesomeness."
+        content: "Vue.js' power is only limited by its awesomeness.",
+        author: {
+          firstName: 'Ryan',
+          lastName: 'Stuhl'
+        }
       };
     },
     filters: {
@@ -26,7 +30,7 @@
       }
     },
     components: {
-      'app-author': Author
+      appAuthor: Author
     }
   }
 </script>
